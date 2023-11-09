@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/primary"
+    tools:context=".Edit_profile">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/backtombol"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/back_arrow"
+            android:padding="14dp"
+            android:onClick="goToSettingsFragment"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:layout_centerInParent="true"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/settings_acc_logo"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingStart="20dp"
+            android:layout_gravity="center"
+            android:background="@drawable/round_back_sec_100"
+            android:text="Ganti Foto"
+            android:textAllCaps="false"
+            android:textColor="@color/primary"
+            android:paddingEnd="15dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama depan"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/namdep"
+            android:layout_height="wrap_content"
+            android:text="Shandy"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:outlineAmbientShadowColor="@color/night_mode"
+            android:outlineProvider="none"
+            android:outlineSpotShadowColor="@color/material_on_surface_disabled"
+            android:textColor="@color/white"
+            android:visibility="visible"
+            android:cursorVisible="true"
+            android:textStyle="bold"
+            android:inputType="text"
+            android:layout_toEndOf="@+id/namdep"
+            />
+        </com.google.android.material.textfield.TextInputLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama Belakang"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"/>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/nambel"
+                    android:layout_height="wrap_content"
+                    android:text="Handika"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:outlineAmbientShadowColor="@color/night_mode"
+                    android:outlineProvider="none"
+                    android:outlineSpotShadowColor="@color/material_on_surface_disabled"
+                    android:textColor="@color/white"
+                    android:visibility="visible"
+                    android:cursorVisible="true"
+                    android:textStyle="bold"
+                    android:inputType="text"
+                    android:layout_toEndOf="@+id/nambel"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No.Telphone"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/No.Telp"
+                    android:layout_height="wrap_content"
+                    android:text="+62 812345678"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:outlineAmbientShadowColor="@color/night_mode"
+                    android:outlineProvider="none"
+                    android:outlineSpotShadowColor="@color/material_on_surface_disabled"
+                    android:textColor="@color/white"
+                    android:visibility="visible"
+                    android:cursorVisible="true"
+                    android:textStyle="bold"
+                    android:inputType="text"
+                    android:layout_toEndOf="@+id/No_telp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+        </RelativeLayout>
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/batal"
+            android:layout_marginLeft="28mm"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/teal_700"
+            android:textColor="@color/white"
+            android:text="Batal"
+            android:onClick="goToSettingsFragment"/>
+        <Button
+            android:layout_marginTop="-48dp"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="46mm"
+            android:layout_height="wrap_content"
+            android:id="@+id/ganti"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/teal_700"
+            android:text="Ganti"
+            android:onClick="goToSettingsFragment"/>
+    </LinearLayout>
+</LinearLayout>

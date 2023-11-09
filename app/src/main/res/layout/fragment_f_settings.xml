@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".f_settings">
+
+    <!-- TODO: Update blank fragment layout -->
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/primary">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:layout_centerInParent="true"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+        </RelativeLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/settings_acc_logo"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="Shandy Handika"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+62 8123456678"
+                    android:textColor="#CCFFFFFF"
+                    android:layout_gravity="center"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/editprof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/round_back_sec_100"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="30dp"
+                    android:text="Edit profile"
+                    android:textAllCaps="false"
+                    android:textColor="@color/primary"
+                    android:onClick="goToSettingsFragment"/>
+                <LinearLayout
+                    android:background="@drawable/round_back_white_10_20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="40dp"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <!--                darkmode-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_marginTop="8dp"
+                            android:id="@+id/nightModeicon"
+                            android:layout_height="40dp"
+                            android:src="@drawable/night_mode_icon"
+                            android:background="@drawable/round_back_night_mode"
+                            android:padding="12dp"/>
+                        <TextView
+                            android:layout_marginStart="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="NightMode"
+                            android:textSize="18dp"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"
+                            android:layout_toEndOf="@+id/nightModeicon" />
+
+                        <Switch
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:minHeight="48dp"
+                            android:switchMinWidth="50dp"
+                            android:theme="@style/nightModeSwitch" />
+                    </RelativeLayout>
+
+                    <!--                //Notification-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_marginTop="8dp"
+                            android:id="@+id/notificationicon"
+                            android:layout_height="40dp"
+                            android:src="@drawable/notif_icon"
+                            android:background="@drawable/round_back_notification"
+                            android:padding="12dp"/>
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Notification"
+                            android:textSize="18dp"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"
+                            android:layout_toEndOf="@+id/notificationicon" />
+
+                        <Switch
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:minHeight="48dp"
+                            android:switchMinWidth="50dp"
+                            android:theme="@style/nightModeSwitch" />
+                    </RelativeLayout>
+
+                    <!--                //private-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_marginTop="8dp"
+                            android:id="@+id/privateicon"
+                            android:layout_height="40dp"
+                            android:src="@drawable/private_account"
+                            android:background="@drawable/round_back_private"
+                            android:padding="12dp"/>
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Private account"
+                            android:textSize="18dp"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"
+                            android:layout_toEndOf="@+id/privateicon" />
+
+                        <Switch
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:minHeight="48dp"
+                            android:switchMinWidth="50dp"
+                            android:theme="@style/nightModeSwitch" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <!--security-->
+                <LinearLayout
+                    android:background="@drawable/round_back_white_10_20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="40dp"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_marginTop="8dp"
+                            android:id="@+id/security"
+                            android:layout_height="40dp"
+                            android:src="@drawable/private_account"
+                            android:background="@drawable/round_back_security"
+                            android:padding="12dp"/>
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Security &amp; Privacy"
+                            android:textSize="18dp"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"
+                            android:layout_toEndOf="@+id/security" />
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_height="40dp"
+                            android:src="@drawable/arrow_right"
+                            android:padding="12dp"/>
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_marginTop="8dp"
+                            android:id="@+id/TextSize"
+                            android:layout_height="40dp"
+                            android:src="@drawable/text_size"
+                            android:background="@drawable/round_back_night_mode"
+                            android:padding="12dp"/>
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Text Size"
+                            android:textSize="18dp"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"
+                            android:layout_toEndOf="@+id/TextSize" />
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_height="40dp"
+                            android:src="@drawable/arrow_right"
+                            android:padding="12dp"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_marginTop="8dp"
+                            android:id="@+id/language"
+                            android:layout_height="40dp"
+                            android:src="@drawable/baseline_font_download_24"
+                            android:background="@drawable/round_back_notification"
+                            android:padding="12dp"/>
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Language"
+                            android:textSize="18dp"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"
+                            android:layout_toEndOf="@+id/language" />
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_height="40dp"
+                            android:src="@drawable/arrow_right"
+                            android:padding="12dp"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:background="@drawable/round_back_white_10_20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="40dp"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+                    <!--            // Send us -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_marginTop="8dp"
+                            android:id="@+id/SendUs"
+                            android:layout_height="40dp"
+                            android:src="@drawable/chat"
+                            android:background="@drawable/round_back_private"
+                            android:padding="12dp"/>
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Send Us Message"
+                            android:textSize="18dp"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"
+                            android:layout_toEndOf="@+id/SendUs" />
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_height="40dp"
+                            android:src="@drawable/arrow_right"
+                            android:padding="12dp"/>
+                    </RelativeLayout>
+
+                    <!--            about us-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_marginTop="8dp"
+                            android:id="@+id/about_us"
+                            android:layout_height="40dp"
+                            android:src="@drawable/info"
+                            android:background="@drawable/round_back_security"
+                            android:padding="12dp"/>
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="About Us"
+                            android:textSize="18dp"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"
+                            android:layout_toEndOf="@+id/about_us" />
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_height="40dp"
+                            android:src="@drawable/arrow_right"
+                            android:padding="12dp"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_marginTop="8dp"
+                            android:id="@+id/FAQ"
+                            android:layout_height="40dp"
+                            android:src="@drawable/question"
+                            android:background="@drawable/round_back_notification"
+                            android:padding="12dp"/>
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="FAQ"
+                            android:textSize="18dp"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"
+                            android:layout_toEndOf="@+id/FAQ" />
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_height="40dp"
+                            android:src="@drawable/arrow_right"
+                            android:padding="12dp"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <Button
+                    android:layout_width="30mm"
+                    android:layout_height="40dp"
+                    android:id="@+id/exit"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:text="LogOut"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:background="@drawable/round_back_white_10_20"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</FrameLayout>
